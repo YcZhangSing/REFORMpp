@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAMM & RamDG++</title>
+  <meta name="description" content="Detecting and grounding semantic-coordinated multimodal manipulations." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Qualitative Results: same visual width as Method */
+    .qualitative-section {
+      text-align: center;
+    }
+
+    .qualitative-figure {
+      width: 100%;
+      max-width: 1180px;
+      margin: 28px auto 0;
+    }
+
+    .qualitative-figure img {
+      width: 100%;
+      max-width: none;
+      display: block;
+    }
+
+    .qualitative-figure figcaption {
+      max-width: 920px;
+      margin: 18px auto 0;
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 768px) {
+      .qualitative-figure {
+        max-width: 100%;
+      }
+
+      .qualitative-figure figcaption {
+        font-size: 0.92rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="container narrow">
+        <div class="top-badge">SAMM Dataset · RamDG++ Framework</div>
+        <h1>Detecting and Grounding Semantic-Coordinated Multimodal Manipulations</h1>
+
+        <p class="authors">
+          Yaxiong Wang, Jinjie Shen, Jielong He, Shengeng Tang, Lechao Chen, Pu Nan, and Zhun Zhong
+        </p>
+
+        <p class="affiliation">
+          A realistic benchmark and retrieval-augmented baseline for multimodal forgery detection.
+        </p>
+
+        <div class="link-row">
+          <a href="https://github.com/shen8424/SAMM-RamDG-CAP" target="_blank" rel="noopener">Code</a>
+          <a href="https://huggingface.co/datasets/SJJ0854/SAMM" target="_blank" rel="noopener">SAMM Dataset</a>
+          <a href="https://huggingface.co/datasets/SJJ0854/CAP" target="_blank" rel="noopener">CAP</a>
+          <a href="#results">Results</a>
+          <a href="#bibtex">BibTeX</a>
+        </div>
+
+        <div class="hero-abstract">
+          <div class="abstract-label">Abstract</div>
+          <p>
+            The detection and grounding of manipulated content in multimodal data is a pivotal challenge in media
+            forensics. While existing benchmarks have advanced the field, they often rely on misalignment artifacts
+            that fail to capture real-world forgery patterns. Practical attacks typically maintain semantic consistency
+            across modalities, whereas current datasets introduce artificial cross-modal disruptions that act as easily
+            detectable shortcuts. To bridge this gap, we introduce the study of Semantically-Coordinated Multimodal
+            Manipulation, where visual edits are systematically paired with contextually consistent textual narratives.
+            We first present the Semantic-Aligned Multimodal Manipulation (SAMM) dataset, synthesized via a two-stage
+            pipeline: (1) applying state-of-the-art image editing techniques, and (2) generating plausible textual
+            descriptions that reinforce the visual deception. To tackle this more sophisticated forgery, we propose
+            RamDG++, a Retrieval-Augmented Manipulation Detection and Grounding framework built upon a Multimodal Large
+            Language Model (MLLM) backbone. RamDG++ leverages retrieved identity-specific background information through
+            two key mechanisms: in the training stage, we introduce Celebrity-News Cross-Source Contrastive Learning
+            (CNCL), which utilizes retrieved multimodal celebrity data as a bridge to align and remedy the semantic gap;
+            in the inference stage, we propose Test-time Adaptive Gating to dynamically filter background noise, further
+            sharpening detection and grounding precision. Extensive experiments demonstrate that RamDG++ significantly
+            outperforms existing methods, achieving a 2.06% improvement in detection accuracy on the SAMM dataset over
+            state-of-the-art approaches.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <figure class="main-figure">
+        <img src="assets/figure-1-semantic-alignment.png" alt="SAMM semantic alignment overview." />
+      </figure>
+
+      <p class="lead">
+        We create semantically coordinated multimodal fake news: the visual manipulation and the textual rewrite
+        support the same false narrative. This removes easy cross-modal mismatch shortcuts and makes detection
+        closer to real-world verification.
+      </p>
+
+      <div class="explanation-block">
+        <p>
+          In many existing multimodal fake-news benchmarks, the image and text are obviously inconsistent.
+          A detector can therefore succeed by simply finding semantic mismatch. SAMM makes the task harder:
+          when a face is swapped or an expression is edited, the accompanying text is also rewritten to remain
+          coherent with the manipulated image. The model must look beyond superficial alignment and reason with
+          visual evidence, textual evidence, and external identity knowledge.
+        </p>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-number">260,970</span>
+          <span class="stat-label">SAMM samples</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">70K</span>
+          <span class="stat-label">CAP celebrities</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">97.15</span>
+          <span class="stat-label">BC accuracy</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">91.78</span>
+          <span class="stat-label">Text grounding F1</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary" class="container narrow section">
+      <p class="section-kicker">Overview</p>
+      <h2>Project Summary</h2>
+      <p>
+        Existing multimodal manipulation benchmarks often rely on cross-modal mismatches that create shortcut
+        artifacts for detection. SAMM introduces semantically coordinated multimodal manipulations, where visual
+        edits are paired with contextually consistent textual narratives. SAMM provides fine-grained annotations
+        for real news, face-swap manipulation, and facial-attribute manipulation. RamDG++ addresses this task with
+        retrieval-augmented celebrity knowledge, cross-source contrastive learning, and test-time adaptive CAP gating.
+      </p>
+    </section>
+
+    <section class="container section explain-grid">
+      <div class="explain-card">
+        <h3>Why semantic alignment matters</h3>
+        <p>
+          Real attackers usually make the image and text agree with each other. If the text says a different person
+          is involved, the image is also changed to support that claim. This makes fake news appear natural instead
+          of obviously mismatched.
+        </p>
+      </div>
+
+      <div class="explain-card">
+        <h3>What SAMM provides</h3>
+        <p>
+          SAMM provides authenticity labels, manipulation-type labels, manipulated face boxes, and word-level
+          tampering labels. This supports both detection and grounding rather than only binary classification.
+        </p>
+      </div>
+
+      <div class="explain-card">
+        <h3>What RamDG++ predicts</h3>
+        <p>
+          RamDG++ outputs whether the news is real or fake, which manipulation type appears, where the image was
+          edited, and which text spans were tampered with.
+        </p>
+      </div>
+    </section>
+
+    <section id="dataset" class="container section">
+      <p class="section-kicker">Dataset</p>
+      <h2>SAMM and CAP</h2>
+
+      <div class="resource-links">
+        <a class="resource-card" href="https://huggingface.co/datasets/SJJ0854/SAMM" target="_blank" rel="noopener">
+          <span class="resource-title">SAMM Dataset</span>
+          <span class="resource-desc">Semantic-Aligned Multimodal Manipulation dataset on Hugging Face.</span>
+        </a>
+
+        <a class="resource-card" href="https://huggingface.co/datasets/SJJ0854/CAP" target="_blank" rel="noopener">
+          <span class="resource-title">CAP Knowledge Base</span>
+          <span class="resource-desc">Celebrity Attributes Portfolio knowledge base on Hugging Face.</span>
+        </a>
+      </div>
+
+      <figure class="project-figure">
+        <img src="assets/figure-2-cap-construction.png" alt="CAP construction pipeline and examples." />
+        <figcaption>
+          <strong>CAP construction.</strong> We collect celebrity names from news data, retrieve candidate face
+          images and biographical metadata, and verify them through filtering and multimodal checking. The final
+          CAP entry contains structured attributes and reference images, giving the detector external evidence
+          for identity-aware verification.
+        </figcaption>
+      </figure>
+
+      <figure class="project-figure">
+        <img src="assets/figure-3-manipulation-pipeline.png" alt="SAMM manipulation construction pipeline." />
+        <figcaption>
+          <strong>SAMM construction.</strong> We first manipulate the image and then rewrite the text to match the
+          visual change. For face swap, the replaced identity is also changed in the text. For attribute editing,
+          the facial expression and the emotional description are modified together. This creates coherent but
+          deceptive multimodal news samples.
+        </figcaption>
+      </figure>
+
+      <figure class="project-figure">
+        <img src="assets/figure-4-dataset-statistics.png" alt="SAMM dataset statistics." />
+        <figcaption>
+          <strong>Dataset statistics.</strong> SAMM contains 260,970 samples, including real news, swap manipulation,
+          and attribute manipulation. The samples come from multiple news sources, and the manipulated identities
+          cover diverse genders and occupations. The word cloud shows that attribute manipulation uses varied
+          emotional descriptions rather than a small set of templates.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="method" class="container section">
+      <p class="section-kicker">Framework</p>
+      <h2>Method</h2>
+
+      <figure class="project-figure">
+        <img src="assets/figure-5-framework.png" alt="RamDG++ framework." />
+        <figcaption>
+          <strong>RamDG++ framework.</strong> During training, RamDG++ aligns the news image and text with retrieved
+          CAP evidence through Celebrity-News Cross-Source Contrastive Learning. During inference, test-time
+          adaptive CAP gating keeps useful retrieved evidence and suppresses weak or noisy evidence before the
+          model generates the final detection and grounding answer.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="results" class="container section results-section">
+      <p class="section-kicker">Evaluation</p>
+      <h2>Results</h2>
+
+      <p class="result-note">
+        We summarize the key findings with highlight cards and compact tables. The full paper text is not embedded.
+        Higher is better except <em>EER</em>.
+      </p>
+
+      <div class="result-highlights">
+        <article class="metric-card hero-metric">
+          <span class="metric-label">SAMM Binary Accuracy</span>
+          <span class="metric-value">97.15</span>
+          <span class="metric-sub">RamDG++ achieves the best real/fake classification accuracy.</span>
+        </article>
+
+        <article class="metric-card">
+          <span class="metric-label">Text Grounding F1</span>
+          <span class="metric-value">91.78</span>
+          <span class="metric-sub">+7.43 over the strongest baseline in SAMM text grounding.</span>
+        </article>
+
+        <article class="metric-card">
+          <span class="metric-label">MDSM AVG ACC</span>
+          <span class="metric-value">91.42</span>
+          <span class="metric-sub">Best cross-domain average when trained on Guardian.</span>
+        </article>
+
+        <article class="metric-card">
+          <span class="metric-label">DGM4 AVG mIoU</span>
+          <span class="metric-value">54.89</span>
+          <span class="metric-sub">Improved grounding robustness under domain shift.</span>
+        </article>
+      </div>
+
+      <div class="result-card">
+        <div class="result-card-header">
+          <div>
+            <h3>Main Results on SAMM</h3>
+            <p>
+              RamDG++ improves decision-making and text grounding, while RamDG remains highly competitive for
+              ranking-based scores and image localization.
+            </p>
+          </div>
+          <span class="pill">Core benchmark</span>
+        </div>
+
+        <div class="leaderboard">
+          <div class="leader-row header">
+            <span>Method</span>
+            <span>BC ACC</span>
+            <span>MLC OF1</span>
+            <span>IG IoUmean</span>
+            <span>TG F1</span>
+          </div>
+
+          <div class="leader-row">
+            <span>ViLT</span>
+            <span>88.83</span>
+            <span>89.84</span>
+            <span>65.38</span>
+            <span>73.40</span>
+          </div>
+
+          <div class="leader-row">
+            <span>HAMMER</span>
+            <span>92.43</span>
+            <span>93.44</span>
+            <span>77.68</span>
+            <span>84.31</span>
+          </div>
+
+          <div class="leader-row">
+            <span>HAMMER++</span>
+            <span>92.26</span>
+            <span>93.34</span>
+            <span>77.66</span>
+            <span>84.35</span>
+          </div>
+
+          <div class="leader-row muted-row">
+            <span>FKA-Owl</span>
+            <span>92.60</span>
+            <span>13.84</span>
+            <span>66.40</span>
+            <span>27.66</span>
+          </div>
+
+          <div class="leader-row ours-row">
+            <span>RamDG</span>
+            <span>94.66</span>
+            <span>95.33</span>
+            <span>80.90</span>
+            <span>84.83</span>
+          </div>
+
+          <div class="leader-row ours-row strong">
+            <span>RamDG++</span>
+            <span>97.15</span>
+            <span>97.08</span>
+            <span>75.83</span>
+            <span>91.78</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-card-header">
+          <div>
+            <h3>Detailed SAMM Metrics</h3>
+            <p>
+              The complete core metric table is kept in a compact scrollable panel for readers who want exact values.
+            </p>
+          </div>
+          <span class="pill">Swipe table</span>
+        </div>
+
+        <div class="scroll-hint">Swipe left or right to view all metrics.</div>
+
+        <div class="table-wrap scrollable refined-table">
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2">Method</th>
+                <th colspan="3">Binary Cls.</th>
+                <th colspan="3">Multi-Label Cls.</th>
+                <th colspan="3">Image Grounding</th>
+                <th colspan="3">Text Grounding</th>
+              </tr>
+              <tr>
+                <th>AUC</th>
+                <th>EER</th>
+                <th>ACC</th>
+                <th>mAP</th>
+                <th>CF1</th>
+                <th>OF1</th>
+                <th>IoUmean</th>
+                <th>IoU50</th>
+                <th>IoU75</th>
+                <th>Prec.</th>
+                <th>Rec.</th>
+                <th>F1</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>ViLT</td>
+                <td>96.10</td>
+                <td>11.02</td>
+                <td>88.83</td>
+                <td>96.03</td>
+                <td>90.21</td>
+                <td>89.84</td>
+                <td>65.38</td>
+                <td>71.91</td>
+                <td>54.49</td>
+                <td>77.42</td>
+                <td>69.78</td>
+                <td>73.40</td>
+              </tr>
+
+              <tr>
+                <td>HAMMER</td>
+                <td>97.85</td>
+                <td>7.80</td>
+                <td>92.43</td>
+                <td>97.98</td>
+                <td>93.77</td>
+                <td>93.44</td>
+                <td>77.68</td>
+                <td>84.41</td>
+                <td>78.44</td>
+                <td>85.94</td>
+                <td>82.74</td>
+                <td>84.31</td>
+              </tr>
+
+              <tr>
+                <td>HAMMER++</td>
+                <td>97.60</td>
+                <td>7.99</td>
+                <td>92.26</td>
+                <td>97.72</td>
+                <td>93.70</td>
+                <td>93.34</td>
+                <td>77.66</td>
+                <td>84.12</td>
+                <td>78.62</td>
+                <td>85.86</td>
+                <td>82.89</td>
+                <td>84.35</td>
+              </tr>
+
+              <tr>
+                <td>FKA-Owl</td>
+                <td>98.09</td>
+                <td>7.19</td>
+                <td>92.60</td>
+                <td>2.53</td>
+                <td>13.97</td>
+                <td>13.84</td>
+                <td>66.40</td>
+                <td>73.54</td>
+                <td>54.82</td>
+                <td>19.16</td>
+                <td>49.71</td>
+                <td>27.66</td>
+              </tr>
+
+              <tr>
+                <td>Qwen2.5VL-72B</td>
+                <td>76.67</td>
+                <td>44.93</td>
+                <td>55.06</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+
+              <tr class="ours">
+                <td>RamDG</td>
+                <td>98.79</td>
+                <td>5.42</td>
+                <td>94.66</td>
+                <td>98.86</td>
+                <td>95.52</td>
+                <td>95.33</td>
+                <td>80.90</td>
+                <td>87.56</td>
+                <td>82.00</td>
+                <td>86.16</td>
+                <td>83.54</td>
+                <td>84.83</td>
+              </tr>
+
+              <tr class="ours">
+                <td>RamDG++</td>
+                <td>-</td>
+                <td>-</td>
+                <td>97.15</td>
+                <td>97.24</td>
+                <td>97.20</td>
+                <td>97.08</td>
+                <td>75.83</td>
+                <td>85.50</td>
+                <td>81.55</td>
+                <td>93.56</td>
+                <td>92.07</td>
+                <td>91.78</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-card-header">
+          <div>
+            <h3>Cross-Domain Generalization</h3>
+            <p>
+              RamDG++ transfers better across news sources and manipulation distributions, showing stronger robustness
+              under domain shift.
+            </p>
+          </div>
+          <span class="pill">Generalization</span>
+        </div>
+
+        <div class="generalization-grid">
+          <div class="mini-board">
+            <h4>MDSM Average Results</h4>
+
+            <div class="mini-row header">
+              <span>Training</span>
+              <span>Method</span>
+              <span>ACC</span>
+              <span>mAP</span>
+              <span>mIoU</span>
+            </div>
+
+            <div class="mini-row">
+              <span>NYT</span>
+              <span>AMD</span>
+              <span>83.96</span>
+              <span>69.39</span>
+              <span>63.56</span>
+            </div>
+
+            <div class="mini-row best">
+              <span>NYT</span>
+              <span>RamDG++</span>
+              <span>86.68</span>
+              <span>71.90</span>
+              <span>66.57</span>
+            </div>
+
+            <div class="mini-row">
+              <span>Guardian</span>
+              <span>AMD</span>
+              <span>88.18</span>
+              <span>60.25</span>
+              <span>61.02</span>
+            </div>
+
+            <div class="mini-row best">
+              <span>Guardian</span>
+              <span>RamDG++</span>
+              <span>91.42</span>
+              <span>62.95</span>
+              <span>63.91</span>
+            </div>
+          </div>
+
+          <div class="mini-board">
+            <h4>DGM4 Average Results</h4>
+
+            <div class="mini-row header">
+              <span>Method</span>
+              <span>ACC</span>
+              <span>mAP</span>
+              <span>Ptok</span>
+              <span>mIoU</span>
+            </div>
+
+            <div class="mini-row">
+              <span>HAMMER++</span>
+              <span>65.61</span>
+              <span>47.36</span>
+              <span>77.34</span>
+              <span>46.19</span>
+            </div>
+
+            <div class="mini-row">
+              <span>FKA-Owl</span>
+              <span>71.96</span>
+              <span>42.68</span>
+              <span>83.31</span>
+              <span>44.15</span>
+            </div>
+
+            <div class="mini-row">
+              <span>AMD</span>
+              <span>74.47</span>
+              <span>52.91</span>
+              <span>80.01</span>
+              <span>51.87</span>
+            </div>
+
+            <div class="mini-row best">
+              <span>RamDG++</span>
+              <span>77.84</span>
+              <span>55.61</span>
+              <span>83.54</span>
+              <span>54.89</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section qualitative-section">
+      <p class="section-kicker">Visualization</p>
+      <h2>Qualitative Results</h2>
+
+      <figure class="project-figure qualitative-figure">
+        <img src="assets/figure-6-qualitative-result.png" alt="Qualitative results for manipulation detection and grounding." />
+        <figcaption>
+          <strong>Qualitative results.</strong> Red annotations mark the ground truth and blue annotations mark
+          model predictions. The examples show that the model can identify manipulated face regions and tampered
+          text spans for both attribute manipulation and face-swap manipulation, while preserving real news as
+          authentic.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="bibtex" class="container narrow section">
+      <p class="section-kicker">Citation</p>
+      <h2>BibTeX</h2>
+
+      <pre><code>@article{samm_ramdg,
+  title   = {Detecting and Grounding Semantic-Coordinated Multimodal Manipulations: A Dataset and Baseline},
+  author  = {Wang, Yaxiong and Shen, Jinjie and He, Jielong and Tang, Shengeng and Chen, Lechao and Nan, Pu and Zhong, Zhun},
+  journal = {Preprint},
+  year    = {2025}
+}</code></pre>
+    </section>
+
+    <footer class="container footer">
+      <p>
+        This project page follows the style of compact academic project websites such as ProbeGen.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
