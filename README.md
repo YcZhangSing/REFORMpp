@@ -1,40 +1,36 @@
-# SAMM & RamDG++ Project Page
+# ROM & REFORM++ Project Page
 
-This version is styled as a compact academic project page similar to ProbeGen.
+Static GitHub Pages site for **The Coherence Trap and Beyond: Benchmarking and Reasoning-Enhanced Detection of MLLM-Driven Forgeries**.
 
-## Included
-- English academic project page
-- No embedded full-paper PDF or full paper text
-- All six selected figures provided by the user
-- A cleaner Results section with only the core tables
-- Ready for GitHub Pages deployment
+## Repository layout
+
+- `index.html`: main project page
+- `styles.css`: site styling and responsive layout
+- `assets/`: statistic icons and paper figures used by the page
+- `paper.pdf`: source paper used as the figure and result reference
+
+## Page contents
+
+- ROM benchmark overview and construction pipeline
+- REFORM++ framework summary
+- Cross-domain and zero-shot evaluation tables
+- Qualitative results and human assessment of reasoning quality
+- BibTeX citation block with copy support
 
 ## Deployment
-1. Upload `index.html`, `styles.css`, and `assets/` to your GitHub repository root.
-2. Go to **Settings -> Pages**.
+
+1. Push `index.html`, `styles.css`, and `assets/` to the repository root.
+2. Open **Settings -> Pages** in GitHub.
 3. Select the `main` branch and `/root`.
 4. Save and wait for the site to publish.
 
-## Update
-This version adds ProbeGen-style explanatory text blocks while still avoiding embedding the full paper.
+## Links
 
-## Update
-Result tables now support horizontal scrolling on small screens, with a sticky first column and scroll hints.
+- Project page: https://yczhangsing.github.io/REFORMpp/
+- Repository: https://github.com/YcZhangSing/REFORMpp
+- ROM Dataset: https://www.modelscope.cn/datasets/YcZhangSing/ROM
 
-## Polish update
-This version uses a refined visual design with gradient background, cards, figure frames, stat highlights, and smoother responsive tables.
+## Notes
 
-## Results redesign
-This version redesigns the Results section with metric highlight cards, a clean leaderboard, and compact generalization boards.
-
-## Table fix
-Adjusted the Detailed SAMM Metrics table so it stays centered and full-width on large screens, and only becomes horizontally scrollable on smaller screens.
-
-## Qualitative figure update
-The Qualitative Results figure is now displayed at a smaller centered width for a cleaner page layout.
-
-
-## Dataset links
-
-- SAMM Dataset: https://huggingface.co/datasets/SJJ0854/SAMM
-- CAP Knowledge Base: https://huggingface.co/datasets/SJJ0854/CAP
+- The site remains a plain static HTML/CSS project with no framework or build step.
+- Figures are sourced from `paper.pdf` and wired into the page as standalone PNG assets.
