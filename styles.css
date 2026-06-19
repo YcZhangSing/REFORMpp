@@ -83,24 +83,29 @@ body::before {
   text-align: center;
 }
 
-.hero-logo-wrap {
+.hero-title-row {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 10px 0 18px;
+  gap: 18px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 10px auto 0;
 }
 
 .hero-paper-logo {
-  width: clamp(92px, 10vw, 132px);
+  width: clamp(76px, 8vw, 108px);
   height: auto;
   display: block;
-  padding: 12px 14px;
-  border-radius: 30px;
+  flex: 0 0 auto;
+  padding: 10px 12px;
+  border-radius: 24px;
   background:
     radial-gradient(circle at 50% 20%, rgba(116, 186, 255, 0.16), transparent 52%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 247, 255, 0.92));
   border: 1px solid rgba(47, 92, 255, 0.12);
-  box-shadow: 0 20px 44px rgba(17, 24, 39, 0.10);
-  filter: drop-shadow(0 10px 18px rgba(31, 47, 94, 0.08));
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.10);
+  filter: drop-shadow(0 8px 14px rgba(31, 47, 94, 0.08));
 }
 
 .top-badge,
@@ -964,14 +969,14 @@ pre {
     margin-bottom: 12px;
   }
 
-  .hero-logo-wrap {
-    margin-bottom: 14px;
+  .hero-title-row {
+    gap: 12px;
   }
 
   .hero-paper-logo {
-    width: clamp(84px, 24vw, 108px);
-    padding: 10px 12px;
-    border-radius: 24px;
+    width: clamp(66px, 18vw, 88px);
+    padding: 8px 10px;
+    border-radius: 18px;
   }
 
   .hero-abstract,
