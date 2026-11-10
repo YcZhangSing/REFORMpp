@@ -1,0 +1,1202 @@
+[
+  {
+    "pair_index": 13,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959996,
+    "reference": {
+      "sample_id": "ROMNYT00004020",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Prime Minister David Cameron on Monday answered questions in Parliament, many of them about ties between his culture minister, Jeremy Hunt, right, and the Murdoch corporation.",
+      "image": "assets/cross_split_audit/images/image_13_ROMNYT00004020.jpg"
+    },
+    "query": {
+      "sample_id": "ROMBBC00058637",
+      "domain": "BBC",
+      "split": "Test",
+      "manipulation_type": "Face Attribute Editing",
+      "caption": "David Cameron called on Labour to hold an inquiry into the Grangemouth dispute",
+      "image": "assets/cross_split_audit/images/image_13_ROMBBC00058637.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 2,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.95,
+    "similarity_raw": 0.949999,
+    "reference": {
+      "sample_id": "ROMGuardian00070415",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Face Swap",
+      "caption": "Paris France A model presents a creation by British fashion designer Nick Swardson as part of the Christian Dior readytowear springsummer 2011 collection",
+      "image": "assets/cross_split_audit/images/caption_02_ROMGuardian00070415.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00000787",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Face Swap",
+      "caption": "A model presents a creation by British designer John Galliano as part of his springsummer 2017 women s readytowear collection for Maison Margiela",
+      "image": "assets/cross_split_audit/images/caption_02_ROMWash00000787.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 3,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.93,
+    "reference": {
+      "sample_id": "ROMGuardian00030687",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Text Replacement",
+      "caption": "Barack Obama meets with John Boehner and other politicians to discuss the budget in the Cabinet Room of the White House.",
+      "image": "assets/cross_split_audit/images/joint_03_ROMGuardian00030687.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00024824",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Text Replacement",
+      "caption": "The President of the United States, Barack Obama, is holding a meeting with his cabinet members, including Hillary Clinton and Joe Biden, to discuss the current state of the country's economy and foreign policy.",
+      "image": "assets/cross_split_audit/images/joint_03_ROMWash00024824.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 4,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959998,
+    "reference": {
+      "sample_id": "ROMNYT00234402",
+      "domain": "NYT",
+      "split": "Val",
+      "manipulation_type": "Authentic",
+      "caption": "President Trump, in a tweet on Sunday, accused South Korea of talking about “appeasement.”",
+      "image": "assets/cross_split_audit/images/image_04_ROMNYT00234402.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00042954",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Face Swap",
+      "caption": "Framed in front of an American flag Donald Trump speaks during a campaign town hall event in Rothschild Wisconsin April 2 2016",
+      "image": "assets/cross_split_audit/images/image_04_ROMUSAToday00042954.jpg"
+    },
+    "primary_annotation": "Same identity, different event",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": true
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 5,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.95,
+    "similarity_raw": 0.949998,
+    "reference": {
+      "sample_id": "ROMGuardian00096886",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Text Replacement",
+      "caption": "The image shows Nelson Mandela, accompanied by his wife Winnie, raising his fist in the air at an event.",
+      "image": "assets/cross_split_audit/images/caption_05_ROMGuardian00096886.jpg"
+    },
+    "query": {
+      "sample_id": "ROMGuardian00208190",
+      "domain": "Guardian",
+      "split": "Test",
+      "manipulation_type": "Text Replacement",
+      "caption": "The image features Nelson Mandela and his wife, Winnie Mandela, clapping and smiling together at an event.",
+      "image": "assets/cross_split_audit/images/caption_05_ROMGuardian00208190.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 6,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929999,
+    "reference": {
+      "sample_id": "ROMGuardian00146308",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Text Replacement",
+      "caption": "In the image, SimonedeBeauvoir and JeanPaulSartre are sitting together at a table, discussing their philosophical ideas.",
+      "image": "assets/cross_split_audit/images/joint_06_ROMGuardian00146308.jpg"
+    },
+    "query": {
+      "sample_id": "ROMGuardian00198209",
+      "domain": "Guardian",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "The French existentialist philosophers JeanPaul Sartre and Simone de Beauvoir taking tea together in Paris in 1946",
+      "image": "assets/cross_split_audit/images/joint_06_ROMGuardian00198209.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 7,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959997,
+    "reference": {
+      "sample_id": "ROMNYT00061651",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Chinese stock markets fell Monday as investors worried that events in America and Europe would weaken demand for Chinese exports, like clothing made at this factory in Anhui Province.",
+      "image": "assets/cross_split_audit/images/image_07_ROMNYT00061651.jpg"
+    },
+    "query": {
+      "sample_id": "ROMBBC00038640",
+      "domain": "BBC",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "North Korean workers at Kaesong receive their wages from the Party in the form of vouchers or local currency",
+      "image": "assets/cross_split_audit/images/image_07_ROMBBC00038640.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 8,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.95,
+    "similarity_raw": 0.949998,
+    "reference": {
+      "sample_id": "ROMNYT00079856",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Face Attribute Editing + Text Replacement",
+      "caption": "Novak Djokovic Dominates in Thrilling Match Against Roger Federer, Clinching Victory in Epic Showdown",
+      "image": "assets/cross_split_audit/images/caption_08_ROMNYT00079856.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00043095",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Text Replacement",
+      "caption": "Roger Federer Dominates in Thrilling Match Against Marin Cilic, Secures Victory at Wimbledon",
+      "image": "assets/cross_split_audit/images/caption_08_ROMUSAToday00043095.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 9,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929999,
+    "reference": {
+      "sample_id": "ROMNYT00034468",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Senator Bernie Sanders and former Secretary of State Hillary Rodham Clinton at the Democratic debate in Las Vegas on Tuesday.",
+      "image": "assets/cross_split_audit/images/joint_09_ROMNYT00034468.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00005407",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Text Replacement",
+      "caption": "The Democratic presidential candidates Hillary Clinton and Bernie Sanders square off in a heated debate, with Bernie Sanders interrupting Clinton multiple times.",
+      "image": "assets/cross_split_audit/images/joint_09_ROMUSAToday00005407.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 10,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959997,
+    "reference": {
+      "sample_id": "ROMNYT00125610",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Franki Francomano",
+      "image": "assets/cross_split_audit/images/image_10_ROMNYT00125610.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00032073",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Face Swap",
+      "caption": "This photo provided by the Philadelphia Police Department via The Philadelphia Inquirer shows Griffin T Campbell A lawsuit has been filed against Campbell the demolition contractor hired to demolish a building in Philadelphia that collapsed Wednesday",
+      "image": "assets/cross_split_audit/images/image_10_ROMUSAToday00032073.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 11,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.95,
+    "similarity_raw": 0.949997,
+    "reference": {
+      "sample_id": "ROMNYT00096880",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Traders working the floor at the New York Stock Exchange during Snap's initial public offering on March 2.",
+      "image": "assets/cross_split_audit/images/caption_11_ROMNYT00096880.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00074430",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Traders work on the floor of the New York Stock Exchange on Oct 21 2013",
+      "image": "assets/cross_split_audit/images/caption_11_ROMUSAToday00074430.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 12,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929998,
+    "reference": {
+      "sample_id": "ROMGuardian00178260",
+      "domain": "Guardian",
+      "split": "Val",
+      "manipulation_type": "Authentic",
+      "caption": "Francois Hollande and Angela Merkel in Paris in 2013 The leaders are heading to Kiev then Moscow for talks on the Ukraine crisis",
+      "image": "assets/cross_split_audit/images/joint_12_ROMGuardian00178260.jpg"
+    },
+    "query": {
+      "sample_id": "ROMBBC00037016",
+      "domain": "BBC",
+      "split": "Test",
+      "manipulation_type": "Text Replacement",
+      "caption": "French President Francois Hollande and German Chancellor Angela Merkel hold a joint press conference at the Chancellery in Berlin.",
+      "image": "assets/cross_split_audit/images/joint_12_ROMBBC00037016.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 14,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.95,
+    "similarity_raw": 0.949992,
+    "reference": {
+      "sample_id": "ROMGuardian00181879",
+      "domain": "Guardian",
+      "split": "Val",
+      "manipulation_type": "Authentic",
+      "caption": "West Virginia Republican Senate candidate Shelley Moore Capito speaks after winning her Senate seat",
+      "image": "assets/cross_split_audit/images/caption_14_ROMGuardian00181879.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00045568",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Face Attribute Editing",
+      "caption": "West Virginia Rep Shelley Moore Capito wins the Republican primary for US Senate seat and speaks to the media at the Kanawha County Clerks Voter Registrain Office in Charleston WVa on Tuesday May 13 2014",
+      "image": "assets/cross_split_audit/images/caption_14_ROMWash00045568.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 15,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929998,
+    "reference": {
+      "sample_id": "ROMNYT00111913",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Text Replacement",
+      "caption": "Bill Cosby is seen leaving a courthouse surrounded by security and his team.",
+      "image": "assets/cross_split_audit/images/joint_15_ROMNYT00111913.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00033674",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Face Attribute Editing + Text Replacement",
+      "caption": "Bill Cosby arrives at court for his sexual assault trial.",
+      "image": "assets/cross_split_audit/images/joint_15_ROMWash00033674.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 16,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959996,
+    "reference": {
+      "sample_id": "ROMNYT00146623",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Text Replacement",
+      "caption": "The Late Show with Stephen Colbert is hosting a political satire show featuring guest appearances from President Trump and Billy Idol. The show is expected to draw large crowds and generate intense discussions about the state of politics in the United States.",
+      "image": "assets/cross_split_audit/images/image_16_ROMNYT00146623.jpg"
+    },
+    "query": {
+      "sample_id": "ROMNYT00262051",
+      "domain": "NYT",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Stephen Colbert is glad that another government shutdown looks unlikely, but he isn't celebrating \"that they're close to a deal to achieve the absolute minimum.\"",
+      "image": "assets/cross_split_audit/images/image_16_ROMNYT00262051.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 17,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.95,
+    "similarity_raw": 0.949992,
+    "reference": {
+      "sample_id": "ROMNYT00140536",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Face Attribute Editing",
+      "caption": "Speaker Paul D. Ryan spoke at a news conference on Capitol Hill on Thursday.",
+      "image": "assets/cross_split_audit/images/caption_17_ROMNYT00140536.jpg"
+    },
+    "query": {
+      "sample_id": "ROMNYT00252112",
+      "domain": "NYT",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Speaker John A. Boehner spoke at his weekly news conference on Thursday on Capitol Hill in Washington.",
+      "image": "assets/cross_split_audit/images/caption_17_ROMNYT00252112.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 18,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929996,
+    "reference": {
+      "sample_id": "ROMGuardian00012680",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Saudi King Salman left greets former US secretary of state Condoleezza Rice",
+      "image": "assets/cross_split_audit/images/joint_18_ROMGuardian00012680.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00037173",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "King Salman greets President Obama upon his arrival on Air Force One at King Khalid International Airport in Riyadh Saudi Arabia",
+      "image": "assets/cross_split_audit/images/joint_18_ROMWash00037173.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 19,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959989,
+    "reference": {
+      "sample_id": "ROMNYT00054221",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "An image from a recent video released by Boko Haram that purports to show a number of the girls abducted from a school in Chibok, Nigeria, two years ago.",
+      "image": "assets/cross_split_audit/images/image_19_ROMNYT00054221.jpg"
+    },
+    "query": {
+      "sample_id": "ROMNYT00268943",
+      "domain": "NYT",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "On Monday, the military announced that it knows the location of the girls who were abducted by Boko Haram, an extremist group located in Nigeria.",
+      "image": "assets/cross_split_audit/images/image_19_ROMNYT00268943.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 20,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.95,
+    "similarity_raw": 0.949984,
+    "reference": {
+      "sample_id": "ROMGuardian00163273",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "US president Barack Obama pauses while speaking during a press conference in the East Room of the White House",
+      "image": "assets/cross_split_audit/images/caption_20_ROMGuardian00163273.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00037439",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Face Swap",
+      "caption": "President Barack Obama pauses as he speaks in the State Dining Room of the White House Monday Aug 8 2011 in Washington",
+      "image": "assets/cross_split_audit/images/caption_20_ROMWash00037439.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 21,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929996,
+    "reference": {
+      "sample_id": "ROMGuardian00088452",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Traders on the floor of the New York stock exchange on Monday US stocks closed sharply lower with the Dow Jones industrial average down more than 588 points",
+      "image": "assets/cross_split_audit/images/joint_21_ROMGuardian00088452.jpg"
+    },
+    "query": {
+      "sample_id": "ROMGuardian00218172",
+      "domain": "Guardian",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Traders work on the floor of the New York Stock Exchange as panic grips the markets 24 August 2015",
+      "image": "assets/cross_split_audit/images/joint_21_ROMGuardian00218172.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 22,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959985,
+    "reference": {
+      "sample_id": "ROMGuardian00019624",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Face Swap",
+      "caption": "Daniel Platzman delivering a sermon at a mosque in Iraq",
+      "image": "assets/cross_split_audit/images/image_22_ROMGuardian00019624.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00014338",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "This file image made from video posted on a militant website July 5 2014 purports to show the leader of the Islamic State group Abu Bakr alBaghdadi delivering a sermon at a mosque in Iraq during his first public appearance",
+      "image": "assets/cross_split_audit/images/image_22_ROMUSAToday00014338.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 23,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.95,
+    "similarity_raw": 0.949984,
+    "reference": {
+      "sample_id": "ROMNYT00180367",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Background Replacement",
+      "caption": "President Trump with the President Andrzej Duda of Poland at the White House in June.",
+      "image": "assets/cross_split_audit/images/caption_23_ROMNYT00180367.jpg"
+    },
+    "query": {
+      "sample_id": "ROMNYT00265736",
+      "domain": "NYT",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "President Trump and President Moon Jae-in of South Korea at the White House in 2017.",
+      "image": "assets/cross_split_audit/images/caption_23_ROMNYT00265736.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 24,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929995,
+    "reference": {
+      "sample_id": "ROMNYT00051406",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Text Replacement",
+      "caption": "The New England Patriots are celebrating a touchdown during a football game.",
+      "image": "assets/cross_split_audit/images/joint_24_ROMNYT00051406.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00056531",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Patriots running back James White celebrates his firsthalf touchdown with Danny Amendola against the Bills",
+      "image": "assets/cross_split_audit/images/joint_24_ROMUSAToday00056531.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 25,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959984,
+    "reference": {
+      "sample_id": "ROMGuardian00067212",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "When challenged by Labour leader Ed Miliband David Cameron said his priority was tax cuts for low and middle earners",
+      "image": "assets/cross_split_audit/images/image_25_ROMGuardian00067212.jpg"
+    },
+    "query": {
+      "sample_id": "ROMGuardian00214321",
+      "domain": "Guardian",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "David Cameron makes a statement on the EU budget summit to the House of Commons",
+      "image": "assets/cross_split_audit/images/image_25_ROMGuardian00214321.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 26,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.9,
+    "similarity_raw": 0.9,
+    "reference": {
+      "sample_id": "ROMNYT00090852",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "President Obama and Mohamed ElBaradei, then the director general of the International Atomic Energy Agency, in 2009.",
+      "image": "assets/cross_split_audit/images/caption_26_ROMNYT00090852.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00045048",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "President Barack Obama is shown here after a recent meeting with Health and Human Services Secretary Sylvia Burwell",
+      "image": "assets/cross_split_audit/images/caption_26_ROMUSAToday00045048.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 27,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929992,
+    "reference": {
+      "sample_id": "ROMGuardian00045874",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Text Replacement",
+      "caption": "The Leicester Tigers' ManuTuilagi runs with the ball during a match against Northampton Saints at Twickenham Stadium.",
+      "image": "assets/cross_split_audit/images/joint_27_ROMGuardian00045874.jpg"
+    },
+    "query": {
+      "sample_id": "ROMGuardian00195386",
+      "domain": "Guardian",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Manusamoa Tuilagi right of Leicester Tigers tangles with Bath s Carl Fearns",
+      "image": "assets/cross_split_audit/images/joint_27_ROMGuardian00195386.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 28,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959983,
+    "reference": {
+      "sample_id": "ROMNYT00165393",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Alex Rodriguez, batting fifth and playing third base in his first game at Yankee Stadium this season, struck out in his first two at-bats.",
+      "image": "assets/cross_split_audit/images/image_28_ROMNYT00165393.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00008900",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "New York Yankees designated hitter Carlos Beltran reacts after striking out against the Kansas City Royals to end the ninth inning of a game at Yankee Stadium The Royals defeated the Yankees 10",
+      "image": "assets/cross_split_audit/images/image_28_ROMUSAToday00008900.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 29,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.9,
+    "similarity_raw": 0.9,
+    "reference": {
+      "sample_id": "ROMNYT00160499",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Face Attribute Editing",
+      "caption": "Cheryl Eckard, center, with her lawyers Lesley Ann Skillen and Neil Getnick on Tuesday.",
+      "image": "assets/cross_split_audit/images/caption_29_ROMNYT00160499.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00002799",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Face Attribute Editing",
+      "caption": "Former Attorney General Eric Holder center sits next to the Rev Raphael G Warnock and US Attorney Sally Quillian Yates in Atlanta on Dec 1 2014",
+      "image": "assets/cross_split_audit/images/caption_29_ROMWash00002799.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 30,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929991,
+    "reference": {
+      "sample_id": "ROMGuardian00002180",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Bernie Sanders and Hillary Clinton shake hands at a debate",
+      "image": "assets/cross_split_audit/images/joint_30_ROMGuardian00002180.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00004261",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Text Replacement",
+      "caption": "The Democratic candidate Hillary Clinton and the Republican candidate Donald Trump are greeting each other on stage at a presidential debate.",
+      "image": "assets/cross_split_audit/images/joint_30_ROMUSAToday00004261.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 31,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.93,
+    "reference": {
+      "sample_id": "ROMNYT00104681",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Face Attribute Editing",
+      "caption": "Relatives of another victim, Carlos Alexandre Machado, grieved during his funeral on Monday.",
+      "image": "assets/cross_split_audit/images/image_31_ROMNYT00104681.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00030098",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Families of passengers react as they wait outside a hall at the Cairo airport",
+      "image": "assets/cross_split_audit/images/image_31_ROMWash00030098.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 32,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.9,
+    "similarity_raw": 0.9,
+    "reference": {
+      "sample_id": "ROMNYT00164324",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Text Replacement",
+      "caption": "Join us for a night of folk-inspired rock with Jeremy Earl, David Berman, and Jarvis Taveniere.",
+      "image": "assets/cross_split_audit/images/caption_32_ROMNYT00164324.jpg"
+    },
+    "query": {
+      "sample_id": "ROMNYT00248130",
+      "domain": "NYT",
+      "split": "Test",
+      "manipulation_type": "Text Replacement",
+      "caption": "Join us for a night of music with SamSkinner, NickLevine, ZackLevine, and EvanStephensHall at The Wild Horse Saloon on December 10th!",
+      "image": "assets/cross_split_audit/images/caption_32_ROMNYT00248130.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 33,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.93,
+    "similarity_raw": 0.929991,
+    "reference": {
+      "sample_id": "ROMGuardian00046293",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Donald Trump speaks in Birmingham Alabama",
+      "image": "assets/cross_split_audit/images/joint_33_ROMGuardian00046293.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00057025",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Trump holds a rally in Des Moines in January",
+      "image": "assets/cross_split_audit/images/joint_33_ROMWash00057025.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 34,
+    "retrieval_type": "caption",
+    "retrieval_label": "Caption Retrieval",
+    "similarity": 0.9,
+    "similarity_raw": 0.9,
+    "reference": {
+      "sample_id": "ROMNYT00197812",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Senator Rick Santorum, left, had a sharp exchange with his opponent, Bob Casey, in a televised debate.",
+      "image": "assets/cross_split_audit/images/caption_34_ROMNYT00197812.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00061561",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Mitt Romney left and Perry talk during an Oct 18 2011 Republican presidential debate in Las Vegas",
+      "image": "assets/cross_split_audit/images/caption_34_ROMUSAToday00061561.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 35,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.88,
+    "similarity_raw": 0.88,
+    "reference": {
+      "sample_id": "ROMGuardian00027508",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "US President Barack Obama shakes hands with former President George W Bush at the dedication of the George W Bush Presidential Center in Dallas",
+      "image": "assets/cross_split_audit/images/joint_35_ROMGuardian00027508.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00039009",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "President Obama hugs French President Nicolas Sarkozy during a ceremony in Cannes celebrating the long friendship between their two nations",
+      "image": "assets/cross_split_audit/images/joint_35_ROMWash00039009.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 36,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.88,
+    "similarity_raw": 0.88,
+    "reference": {
+      "sample_id": "ROMGuardian00099146",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Nigel Farage and newly elected Ukip MP Douglas Carswell joins their party s candidate Mark Reckless on Rochester High Street",
+      "image": "assets/cross_split_audit/images/joint_36_ROMGuardian00099146.jpg"
+    },
+    "query": {
+      "sample_id": "ROMBBC00039164",
+      "domain": "BBC",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Douglas Carswell and Nigel Farage will both address the conference",
+      "image": "assets/cross_split_audit/images/joint_36_ROMBBC00039164.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 37,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.88,
+    "similarity_raw": 0.88,
+    "reference": {
+      "sample_id": "ROMGuardian00163987",
+      "domain": "Guardian",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Momentum which was set up in the weeks following Jeremy Corbyn s election as Labour party leader was elected in every region",
+      "image": "assets/cross_split_audit/images/joint_37_ROMGuardian00163987.jpg"
+    },
+    "query": {
+      "sample_id": "ROMGuardian00198997",
+      "domain": "Guardian",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Jeremy Corbyn has no unique claim on virtue yet his record has become the touchstone of left integrity",
+      "image": "assets/cross_split_audit/images/joint_37_ROMGuardian00198997.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 38,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.88,
+    "similarity_raw": 0.88,
+    "reference": {
+      "sample_id": "ROMNYT00140736",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "The Batsheva Dance Company in Ohad Naharin's \"Last Work,\" at the Brooklyn Academy of Music's Howard Gilman Opera House.",
+      "image": "assets/cross_split_audit/images/joint_38_ROMNYT00140736.jpg"
+    },
+    "query": {
+      "sample_id": "ROMNYT00260391",
+      "domain": "NYT",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Batsheva Dance Company Zina Zinchenko, left, and Bobbi Smith with other troupe members in \"Sadeh21\" at the Brooklyn Academy of Music.",
+      "image": "assets/cross_split_audit/images/joint_38_ROMNYT00260391.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 39,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.88,
+    "similarity_raw": 0.88,
+    "reference": {
+      "sample_id": "ROMNYT00162237",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Face Swap + Text Replacement",
+      "caption": "Raoul Cédras and Barack Obama are shaking hands at a press conference for the G20 Seoul Summit in 2010.",
+      "image": "assets/cross_split_audit/images/joint_39_ROMNYT00162237.jpg"
+    },
+    "query": {
+      "sample_id": "ROMWash00036357",
+      "domain": "Washington Post",
+      "split": "Test",
+      "manipulation_type": "Authentic",
+      "caption": "Japanese Prime Minister Shinzo Abe speaks with President Obama at the opening session of the Nuclear Security Summit",
+      "image": "assets/cross_split_audit/images/joint_39_ROMWash00036357.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 40,
+    "retrieval_type": "joint",
+    "retrieval_label": "Image–Caption Retrieval",
+    "similarity": 0.88,
+    "similarity_raw": 0.88,
+    "reference": {
+      "sample_id": "ROMNYT00212281",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Face Attribute Editing + Text Replacement",
+      "caption": "Bears' Keegan Engelbrecht Leads Team to Victory, Hoisting Trophy in Celebration",
+      "image": "assets/cross_split_audit/images/joint_40_ROMNYT00212281.jpg"
+    },
+    "query": {
+      "sample_id": "ROMGuardian00203884",
+      "domain": "Guardian",
+      "split": "Test",
+      "manipulation_type": "Face Swap",
+      "caption": "The Rabbitohs captain Jake Shears is hoisted high after South Sydney s win over Cronulla in the final.",
+      "image": "assets/cross_split_audit/images/joint_40_ROMGuardian00203884.jpg"
+    },
+    "primary_annotation": "Unrelated",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": false
+    },
+    "note": ""
+  },
+  {
+    "pair_index": 1,
+    "retrieval_type": "image",
+    "retrieval_label": "Image Retrieval",
+    "similarity": 0.96,
+    "similarity_raw": 0.959998,
+    "reference": {
+      "sample_id": "ROMNYT00021671",
+      "domain": "NYT",
+      "split": "Train",
+      "manipulation_type": "Authentic",
+      "caption": "Donald Trump asking for supporters to pledge to vote for him in Concord, N.C., on Monday.",
+      "image": "assets/cross_split_audit/images/image_01_ROMNYT00021671.jpg"
+    },
+    "query": {
+      "sample_id": "ROMUSAToday00000446",
+      "domain": "USA Today",
+      "split": "Test",
+      "manipulation_type": "Face Swap + Text Replacement",
+      "caption": "Donald Trump holds a rally in front of a crowd of supporters, including Texas Governor Greg Abbott.",
+      "image": "assets/cross_split_audit/images/image_01_ROMUSAToday00000446.jpg"
+    },
+    "primary_annotation": "Similar content, different event",
+    "auxiliary_flags": {
+      "near_duplicate_image": false,
+      "paraphrased_caption": false,
+      "same_identity": true
+    },
+    "note": ""
+  }
+]

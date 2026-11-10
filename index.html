@@ -221,6 +221,21 @@
         </figcaption>
       </figure>
 
+      <div id="cross-split-audit" class="cross-split-audit">
+        <h3>Cross-Split Similarity Audit</h3>
+        <p>
+          To examine possible semantic overlap across data splits, we manually inspect highly similar training/validation–test pairs retrieved using image, caption, and image–caption representations. The examples below show that high embedding similarity often arises from recurring public figures or visually similar news scenes, rather than duplicated source items.
+        </p>
+        <p>
+          All descendants of the same source news item are assigned to the same split. The cases below are selected annotated examples from the cross-split retrieval audit.
+        </p>
+        <div id="audit-list" class="audit-list"></div>
+        <div class="audit-actions">
+          <button id="audit-more" class="audit-more" type="button">Show 10 More</button>
+          <button id="audit-collapse" class="audit-collapse" type="button" hidden>Collapse</button>
+        </div>
+      </div>
+
       <details class="details-panel">
         <summary>Additional Generation Examples</summary>
         <figure class="project-figure figure-full details-figure">
@@ -792,5 +807,6 @@ Eprint = {arXiv:2603.01993},
       });
     }
   </script>
+  <script src="assets/cross_split_audit/audit.js?order=3"></script>
 </body>
 </html>
